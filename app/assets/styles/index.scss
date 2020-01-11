@@ -1,0 +1,45 @@
+$color--light-grey: rgba(239, 239, 239, 1);
+$color--white: rgba(255, 255, 255, 1);
+$color--gray: rgba(204, 204, 204, 1);
+$color--dark-gray: rgba(77, 77, 77, 1);
+
+body {
+  background-color: $color--light-grey;
+}
+
+.document {
+  display: grid;
+  grid-template-areas:
+    "navigation banner"
+    "navigation main"
+    "navigation contentinfo";
+  grid-template-columns: 280px 1fr;
+  grid-template-rows: 56px 1fr 56px;
+
+  height: 100vh;
+}
+
+.banner {
+  grid-area: banner;
+  background-color: $color--white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation {
+  grid-area: navigation;
+  background-color: $color--white;
+}
+
+.main {
+  grid-area: main;
+}
+
+.contentinfo {
+  grid-area: contentinfo;
+  background-color: $color--white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
